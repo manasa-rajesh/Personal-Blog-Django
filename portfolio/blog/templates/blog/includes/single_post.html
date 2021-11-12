@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "blog/single_post.css" %}">
+<li>
+    <article class="post">
+        <a href="{% url 'post-details' "habits" %}">
+            <img scr="" alt="Atomic Habits" />
+            <div class="post__content">
+                <h3>Atomic Habits</h3>
+                <p>This Blog is a summary and a collection of my insights about the book Atomic Habits written by James Clear</p>
+            </div>
+        </a>
+    </article>
+</li>

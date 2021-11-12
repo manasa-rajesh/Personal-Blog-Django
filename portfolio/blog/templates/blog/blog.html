@@ -1,10 +1,39 @@
 {% extends 'base.html' %}
 
+
+{% load static %}
+
 {% block title %}
     Blog
 {% endblock  %}
-
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/single_post.css" %}">
+    <link rel="stylesheet" href="{% static "blog/blog.css" %}">
+{% endblock  %} 
 {% block content %}
-    Welcome to my Blog
+
+    <section id="welcome">
+        <header>
+            <img src="blog/images/Manasa.jpg" alt="Manasa- The Author of this Blog">
+            <h2>Manasa's Blog</h2>
+        </header>
+        <p>Hey! I am Manasa and I love to blog about tech and personal growth!</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            {% include "blog/includes/single_post.html" %}
+        </ul>
+    </section>
+
+    <section if="about">
+        <h2>What I do</h2>
+        <p>I love to code. I also find joy in reading and writing about non-fiction books.<p>
+    </section>
+
+
+
 {% endblock %}
 
