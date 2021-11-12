@@ -14,7 +14,7 @@
 
     <section id="welcome">
         <header>
-            <img src="blog/images/Manasa.jpg" alt="Manasa- The Author of this Blog">
+            <img src="{% static "blog/images/Manasa.jpg" %}" alt="Manasa- The Author of this Blog">
             <h2>Manasa's Blog</h2>
         </header>
         <p>Hey! I am Manasa and I love to blog about tech and personal growth!</p>
@@ -24,7 +24,9 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            {% include "blog/includes/single_post.html" %}
+            {% for post in posts %}
+                {% include "blog/includes/single_post.html" %}
+            {% endfor %}
         </ul>
     </section>
 

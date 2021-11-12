@@ -2,11 +2,11 @@
 <link rel="stylesheet" href="{% static "blog/single_post.css" %}">
 <li>
     <article class="post">
-        <a href="{% url 'post-details' "habits" %}">
-            <img scr="" alt="Atomic Habits" />
+        <a href="{% url 'post-details' post.slug %}">
+            <img scr="{% static "blog/images/"|add:post.image %}" alt="{{ post.title }}" />
             <div class="post__content">
-                <h3>Atomic Habits</h3>
-                <p>This Blog is a summary and a collection of my insights about the book Atomic Habits written by James Clear</p>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
             </div>
         </a>
     </article>

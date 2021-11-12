@@ -14,11 +14,8 @@
     <section>
         <h2>My Collected Posts</h2>
         <ul>
-            {% include "blog/includes/single_post.html" %}
-            {% include "blog/includes/single_post.html" %}
-            {% include "blog/includes/single_post.html" %}
-            {% include "blog/includes/single_post.html" %}
-            {% include "blog/includes/single_post.html" %}
-            {% include "blog/includes/single_post.html" %}
+            {% for post in all_posts %}
+                {% include "blog/includes/single_post.html" %}
+            {% endfor %}
         </ul>
 {% endblock %}
